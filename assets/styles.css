@@ -337,12 +337,12 @@ img {
     box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
 }
 
-svg {
+.unity {
     max-width: 6%;
 }
 
 .u {
-    max-width: 8%;
+    max-width: 6%;
 }
 
 .hcj {
