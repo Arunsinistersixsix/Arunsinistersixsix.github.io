@@ -337,10 +337,33 @@ img {
     box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
 }
 
+svg {
+    max-width: 6%;
+}
+
+.u {
+    max-width: 8%;
+}
+
+.hcj {
+    max-width: 9%;
+}
+
+.psql {
+    max-width: 10%;
+}
+
+.ai {
+    max-width: 9.5%;
+}
+
+.code {
+    max-width: 8%;
+}
+
 .skills__icon {
     font-size: 2rem;
     margin-right: var(--mb-2);
-    color: var(--first-color);
 }
 
 .skills__names {
@@ -358,24 +381,44 @@ img {
     z-index: var(--z-back);
 }
 
-.skills__html {
+.skills__unity3D {
     width: 60%;
 }
 
-.skills__css {
-    width: 50%;
+.skills__unrealengine4 {
+    width: 40%;
 }
 
-.skills__js {
-    width: 50%;
+.skills__blender {
+    width: 40%;
 }
 
-.skills__ux {
-    width: 85%;
+.skills__androidstudio {
+    width: 30%;
+}
+
+.skills__Csharp {
+    width: 45%;
+}
+
+.skills__photoshop {
+    width: 45%;
+}
+
+.skills__illustrator {
+    width: 45%;
+}
+
+.skills__HCJ {
+    width: 45%;
+}
+
+.skills__PM {
+    width: 30%;
 }
 
 .skills__img {
-    border-radius: .5rem;
+    border-radius: .1rem;
 }
 
 
