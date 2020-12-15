@@ -13,6 +13,7 @@
 
     <title>Portfolio website complete</title>
 </head>
+<!--1st modal css-->
 <style>
     /* The Modal (background) */
     
@@ -63,6 +64,7 @@
         cursor: pointer;
     }
     /* Next & previous buttons */
+    /* Next & previous buttons */
     
     .prev {
         display: block;
@@ -70,18 +72,10 @@
         color: white;
         position: absolute;
         font-size: 40px;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        padding-left: 5%;
-        padding-right: 5%;
-        max-width: 20%;
-        font-weight: bold;
-        margin-top: -39%;
+        padding: 8px 12px;
+        position: absolute;
+        top: 28%;
         left: -3%;
-        transition: 0.6s ease;
-        border-radius: 3px 0 0 3px;
-        user-select: none;
-        -webkit-user-select: none;
     }
     /* Position the "next button" to the right */
     
@@ -91,24 +85,22 @@
         color: white;
         position: absolute;
         font-size: 40px;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        padding-left: 5%;
-        padding-right: 5%;
-        max-width: 20%;
-        font-weight: bold;
-        margin-top: -39%;
+        padding: 8px 12px;
+        top: 28%;
         right: -3%;
-        transition: 0.6s ease;
-        border-radius: 3px 0 0 3px;
-        user-select: none;
-        -webkit-user-select: none;
     }
     
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:600px) {
         .prev,
         .next {
-            font-size: 30px;
+            font-size: 20px;
+            top: 26%;
+        }
+    }
+    
+    @media screen and (max-width:1000px) {
+        .numbertext {
+            margin-top: -13px
         }
     }
     /* On hover, add a black background color with a little bit see-through */
@@ -120,11 +112,12 @@
     /* Number text (1/3 etc) */
     
     .numbertext {
+        display: block;
         color: #f2f2f2;
         font-size: 12px;
         padding: 8px 12px;
         position: absolute;
-        top: 0;
+        top: -4%;
     }
     
     .imgr {
@@ -160,59 +153,328 @@
     }
 </style>
 
+<!--2st modal css-->
+<style>
+    /* The Modal (background) */
+    
+    .modal2 {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(31, 30, 30);
+    }
+    /* Modal Content */
+    
+    .modal-content2 {
+        position: relative;
+        margin: auto;
+        padding: 1;
+        width: 90%;
+        max-width: 1200px;
+    }
+    /* The Close Button */
+    
+    .close2 {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    
+    .close2:hover,
+    .close2:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .mySlides2 {
+        display: none;
+    }
+    
+    .cursor2 {
+        cursor: pointer;
+    }
+    /* Next & previous buttons */
+    
+    .prev2 {
+        display: block;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        font-size: 40px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 28%;
+        left: -3%;
+    }
+    /* Position the "next button" to the right */
+    
+    .next2 {
+        display: block;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        font-size: 40px;
+        padding: 8px 12px;
+        top: 28%;
+        right: -3%;
+    }
+    
+    @media screen and (max-width:600px) {
+        .prev2,
+        .next2 {
+            font-size: 20px;
+            top: 26%;
+        }
+    }
+    
+    @media screen and (max-width:1000px) {
+        .numbertext2 {
+            margin-top: -13px
+        }
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    
+    .prev2:hover,
+    .next2:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    /* Number text (1/3 etc) */
+    
+    .numbertext2 {
+        display: block;
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: -4%;
+    }
+    
+    .imgr2 {
+        margin-bottom: -4px;
+        margin: auto;
+        width: 90%;
+    }
+    
+    .caption-container2 {
+        text-align: center;
+        background-color: rgb(31, 30, 30);
+        padding: 2px 16px;
+        color: white;
+    }
+    
+    img.hover-shadow {
+        transition: 0.3s;
+    }
+    
+    .hover-shadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+<!--3rd modal css-->
+<style>
+    /* The Modal (background) */
+    
+    .modal3 {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(31, 30, 30);
+    }
+    /* Modal Content */
+    
+    .modal-content3 {
+        position: relative;
+        margin: auto;
+        padding: 1;
+        width: 90%;
+        max-width: 1200px;
+    }
+    /* The Close Button */
+    
+    .close3 {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    
+    .close3:hover,
+    .close3:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .mySlides3 {
+        display: none;
+    }
+    
+    .cursor3 {
+        cursor: pointer;
+    }
+    /* Next & previous buttons */
+    
+    .prev3 {
+        display: block;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        font-size: 40px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 28%;
+        left: -3%;
+    }
+    /* Position the "next button" to the right */
+    
+    .next3 {
+        display: block;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        font-size: 40px;
+        padding: 8px 12px;
+        top: 28%;
+        right: -3%;
+    }
+    
+    @media screen and (max-width:600px) {
+        .prev3,
+        .next3 {
+            font-size: 20px;
+            top: 26%;
+        }
+    }
+    
+    @media screen and (max-width:1000px) {
+        .numbertext3 {
+            margin-top: -13px
+        }
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    
+    .prev3:hover,
+    .next3:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    /* Number text (1/3 etc) */
+    
+    .numbertext3 {
+        display: block;
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: -4%;
+    }
+    
+    .imgr3 {
+        margin-bottom: -4px;
+        margin: auto;
+        width: 90%;
+    }
+    
+    .caption-container3 {
+        text-align: center;
+        background-color: rgb(31, 30, 30);
+        padding: 2px 16px;
+        color: white;
+    }
+    
+    img.hover-shadow {
+        transition: 0.3s;
+    }
+    
+    .hover-shadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+
 
 <body>
 
 
     <!--===== HEADER =====-->
     <header class="l-header">
+        <!--ist modal html-->
         <div id="myModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
             <div class="modal-content">
                 <div class="pal">
                     <div class="mySlides">
-                        <div class="numbertext">1 / 6 </div>
-                        <img class="imgr" src="assets/img/work2.jpg" style="width:90%">
+                        <div class="numbertext">1 / 8 </div>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <img class="imgr" src="assets/img/fw1.png" style="width:90%">
                     </div>
 
                     <div class="mySlides">
-                        <div class="numbertext">2 / 6</div>
-                        <img class="imgr" src="assets/img/work3.jpg" style="width:90%">
+                        <div class="numbertext">2 / 8</div>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <img class="imgr" src="assets/img/fw1.png" style="width:90%">
                     </div>
 
                     <div class="mySlides">
-                        <div class="numbertext">3 / 6</div>
-                        <img class="imgr" src="assets/img/work4.jpg" style="width:90%">
+                        <div class="numbertext">3 / 8</div>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <img class="imgr" src="assets/img/fw1.png" style="width:90%">
                     </div>
 
                     <div class="mySlides">
-                        <div class="numbertext">4 / 6</div>
-                        <img class="imgr" src="assets/img/work5.jpg" style="width:90%">
+                        <div class="numbertext">4 / 8</div>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <img class="imgr" src="assets/img/fw2.png" style="width:90%">
                     </div>
 
                     <div class="mySlides">
-                        <div class="numbertext">5 / 6</div>
-                        <img class="imgr" src="assets/img/work6.jpg" style="width:90%">
+                        <div class="numbertext">5 / 8</div>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <img class="imgr" src="assets/img/fw3.png" style="width:90%">
                     </div>
 
                     <div class="mySlides">
-                        <div class="numbertext">6 / 6</div>
-                        <img class="imgr" src="assets/img/work5.jpg" style="width:90%">
+                        <div class="numbertext">6 / 8</div>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <img class="imgr" src="assets/img/fw4.png" style="width:90%">
                     </div>
-
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 8</div>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <img class="imgr" src="assets/img/fw5.png" style="width:90%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 8</div>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <img class="imgr" src="assets/img/fw6.png" style="width:90%">
+                    </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
 
                 <div class="caption-container">
                     <p id="caption"></p>
@@ -228,16 +490,165 @@
                 </div>
 
                 <div class="overflowtest">
-
-                    <img class="demo cursor" src="assets/img/work2.jpg" style="width:25%" onclick="currentSlide(1)" alt="">
-                    <img class="demo cursor" src="assets/img/work3.jpg" style="width:25%" onclick="currentSlide(2)" alt="">
-                    <img class="demo cursor" src="assets/img/work4.jpg" style="width:25%" onclick="currentSlide(3)" alt="">
-                    <img class="demo cursor" src="assets/img/work5.jpg" style="width:25%" onclick="currentSlide(4)" alt="">
-                    <img class="demo cursor" src="assets/img/work6.jpg" style="width:25%" onclick="currentSlide(5)" alt="">
-                    <img class="demo cursor" src="assets/img/work4.jpg" style="width:25%" onclick="currentSlide(6)" alt="">
+                    <img class="demo cursor" src="assets/img/fw1.png" style="width:25%" onclick="currentSlide(1)" alt="">
+                    <img class="demo cursor" src="assets/img/fw1.png" style="width:25%" onclick="currentSlide(2)" alt="">
+                    <img class="demo cursor" src="assets/img/fw1.png" style="width:25%" onclick="currentSlide(3)" alt="">
+                    <img class="demo cursor" src="assets/img/fw2.png" style="width:25%" onclick="currentSlide(4)" alt="">
+                    <img class="demo cursor" src="assets/img/fw3.png" style="width:25%" onclick="currentSlide(5)" alt="">
+                    <img class="demo cursor" src="assets/img/fw4.png" style="width:25%" onclick="currentSlide(6)" alt="">
+                    <img class="demo cursor" src="assets/img/fw5.png" style="width:25%" onclick="currentSlide(7)" alt="">
+                    <img class="demo cursor" src="assets/img/fw6.png" style="width:25%" onclick="currentSlide(8)" alt="">
                 </div>
             </div>
         </div>
+
+        <!--2nd modal html-->
+        <div id="myModal2" class="modal2">
+            <span class="close cursor2" onclick="closeModal2()">&times;</span>
+            <div class="modal-content2">
+                <div class="pal">
+                    <div class="mySlides2">
+                        <div class="numbertext2">1 / 6 </div>
+                        <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                        <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                        <img class="imgr2" src="assets/img/erg.png" style="width:90%">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext2">2 / 6</div>
+                        <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                        <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                        <img class="imgr2" src="assets/img/erg1.png" style="width:90%">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext2">3 / 6</div>
+                        <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                        <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                        <img class="imgr2" src="assets/img/erg2.png" style="width:90%">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext2">4 / 6</div>
+                        <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                        <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                        <img class="imgr2" src="assets/img/erg3.png" style="width:90%">
+                    </div>
+
+                    <div class="mySlides2">
+                        <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                        <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                        <div class="numbertext2">5 / 6</div>
+                        <img class="imgr2" src="assets/img/erg4.png" style="width:90%">
+                    </div>
+
+                    <div class="mySlides2">
+                        <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                        <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                        <div class="numbertext2">6 / 6</div>
+                        <img class="imgr2" src="assets/img/erg5.png" style="width:90%">
+                    </div>
+
+
+                </div>
+
+                <div class="caption-container2">
+                    <p id="caption2"></p>
+                </div>
+                <div class="caption-container2">
+                    <p id="caption2"></p>
+                </div>
+                <div class="caption-container2">
+                    <p id="caption2"></p>
+                </div>
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <div class="overflowtest">
+                    <img class="demo cursor" src="assets/img/erg.png" style="width:25%" onclick="currentSlide2(1)" alt="">
+                    <img class="demo cursor" src="assets/img/erg1.png" style="width:25%" onclick="currentSlide2(2)" alt="">
+                    <img class="demo cursor" src="assets/img/erg2.png" style="width:25%" onclick="currentSlide2(3)" alt="">
+                    <img class="demo cursor" src="assets/img/erg3.png" style="width:25%" onclick="currentSlide2(4)" alt="">
+                    <img class="demo cursor" src="assets/img/erg4.png" style="width:25%" onclick="currentSlide2(5)" alt="">
+                    <img class="demo cursor" src="assets/img/erg5.png" style="width:25%" onclick="currentSlide2(6)" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!--3rd modal html-->
+        <div id="myModal3" class="modal3">
+            <span class="close cursor3" onclick="closeModal3()">&times;</span>
+            <div class="modal-content3">
+                <div class="pal">
+                    <div class="mySlides3">
+                        <div class="numbertext3">1 / 6 </div>
+                        <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+                        <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+                        <img class="imgr3" src="assets/img/ai.png" style="width:90%">
+                    </div>
+
+                    <div class="mySlides3">
+                        <div class="numbertext3">2 / 6</div>
+                        <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+                        <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+                        <img class="imgr3" src="assets/img/work3.jpg" style="width:90%">
+                    </div>
+
+                    <div class="mySlides3">
+                        <div class="numbertext3">3 / 6</div>
+                        <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+                        <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+                        <img class="imgr" src="assets/img/work4.jpg" style="width:90%">
+                    </div>
+
+                    <div class="mySlides3">
+                        <div class="numbertext3">4 / 6</div>
+                        <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+                        <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+                        <img class="imgr3" src="assets/img/work5.jpg" style="width:90%">
+                    </div>
+
+                    <div class="mySlides3">
+                        <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+                        <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+                        <div class="numbertext3">5 / 6</div>
+                        <img class="imgr3" src="assets/img/work6.jpg" style="width:90%">
+                    </div>
+
+                    <div class="mySlides3">
+                        <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+                        <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+                        <div class="numbertext">6 / 6</div>
+                        <img class="imgr3" src="assets/img/work5.jpg" style="width:90%">
+                    </div>
+                </div>
+
+                <div class="caption-container3">
+                    <p id="caption3"></p>
+                </div>
+                <div class="caption-container3">
+                    <p id="caption3"></p>
+                </div>
+                <div class="caption-container3">
+                    <p id="caption3"></p>
+                </div>
+                <div class="caption-container3">
+                    <p id="caption3"></p>
+                </div>
+
+                <div class="overflowtest">
+                    <img class="demo cursor" src="assets/img/ai.png" style="width:25%" onclick="currentSlide3(1)" alt="">
+                    <img class="demo cursor" src="assets/img/work3.jpg" style="width:25%" onclick="currentSlide3(2)" alt="">
+                    <img class="demo cursor" src="assets/img/work4.jpg" style="width:25%" onclick="currentSlide3(3)" alt="">
+                    <img class="demo cursor" src="assets/img/work5.jpg" style="width:25%" onclick="currentSlide3(4)" alt="">
+                    <img class="demo cursor" src="assets/img/work6.jpg" style="width:25%" onclick="currentSlide3(5)" alt="">
+                    <img class="demo cursor" src="assets/img/work4.jpg" style="width:25%" onclick="currentSlide3(6)" alt="">
+                </div>
+            </div>
+        </div>
+
+
         <nav class="nav bd-grid">
             <div>
                 <a href="#" class="nav__logo">SinisterSixSix</a>
@@ -440,39 +851,27 @@
             <h2 class="section-title">Work</h2>
             <div class="work__container bd-grid">
                 <div class="work__img">
-                    <img src="assets/img/work1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                    <img src="assets/img/fw6.png" class="hover-shadow cursor">
+                    <div class="work__link" onclick="openModal();currentSlide(1)">
+                        <a class="work__link-name">View</a>
+                    </div>
                 </div>
+                <div>Fireworks VFX (PC , Android)</div>
+                <div class="work__img">
+                    <img src="assets/img/erg1.png" alt="">
+                    <div class="work__link" onclick="openModal2();currentSlide2(1)">
+                        <a class="work__link-name">View</a>
+                    </div>
+                </div>
+                <div>3D Endless Runner (PC , Android)</div>
+                <div class="work__img">
+                    <img src="assets/img/fw6.png" alt="">
+                    <div class="work__link" onclick="openModal3();currentSlide3(1)">
+                        <a class="work__link-name">View</a>
+                    </div>
+                </div>
+                <div>Animations</div>
 
-                <div class="work__img">
-                    <img src="assets/img/work2.jpg" alt="">
-                    <div class="work__link">
-                        <a href="# " class="work__link-name">View</a>
-                    </div>
-                </div>
-                <div class="work__img ">
-                    <img src="assets/img/work3.jpg" alt="">
-                    <div class="work__link">
-                        <a href="#" class="work__link-name">View</a>
-                    </div>
-                </div>
-                <div class="work__img">
-                    <img src="assets/img/work4.jpg" alt="">
-                    <div class="work__link">
-                        <a href="#" class="work__link-name">View</a>
-                    </div>
-                </div>
-                <div class="work__img">
-                    <img src="assets/img/work5.jpg" alt="">
-                    <div class="work__link">
-                        <a href="#" class="work__link-name">View</a>
-                    </div>
-                </div>
-                <div class="work__img ">
-                    <img src="assets/img/work6.jpg" alt="">
-                    <div class="work__link">
-                        <a href="#" class="work__link-name">View</a>
-                    </div>
-                </div>
             </div>
 
 
@@ -515,6 +914,7 @@
 
     <!--===== MAIN JS =====-->
     <script src="assets/main.js "></script>
+    <!--1st modal js-->
     <script>
         function openModal() {
             document.getElementById("myModal").style.display = "block";
@@ -535,16 +935,17 @@
             showSlides(slideIndex = n);
         }
 
+
         function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("mySlides");
             var dots = document.getElementsByClassName("demo");
             var captionText = document.getElementById("caption");
             if (n > slides.length) {
-                slideIndex = 1
+                slideIndex = 1;
             }
             if (n < 1) {
-                slideIndex = slides.length
+                slideIndex = slides.length;
             }
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
@@ -555,6 +956,96 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " ";
             captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+
+    <!--2nd modal js-->
+    <script>
+        function openModal2() {
+            document.getElementById("myModal2").style.display = "block";
+        }
+
+        function closeModal2() {
+            document.getElementById("myModal2").style.display = "none";
+        }
+
+        var slideIndex2 = 1;
+        showSlides2(slideIndex2);
+
+        function plusSlides2(n) {
+            showSlides2(slideIndex2 += n);
+        }
+
+        function currentSlide2(n) {
+            showSlides2(slideIndex2 = n);
+        }
+
+
+        function showSlides2(n) {
+            var i;
+            var slides2 = document.getElementsByClassName("mySlides2");
+            var dots2 = document.getElementsByClassName("demo");
+            var captionText2 = document.getElementById("caption2");
+            if (n > slides2.length) {
+                slideIndex2 = 1
+            }
+            if (n < 1) {
+                slideIndex2 = slides2.length
+            }
+            for (i = 0; i < slides2.length; i++) {
+                slides2[i].style.display = "none";
+            }
+            for (i = 0; i < dots2.length; i++) {
+                dots2[i].className = dots2[i].className.replace("active2", " ");
+            }
+            slides2[slideIndex2 - 1].style.display = "block";
+            dots2[slideIndex2 - 1].className += " ";
+            captionText2.innerHTML = dots2[slideIndex2 - 1].alt;
+        }
+    </script>
+
+    <!--3nd modal js-->
+    <script>
+        function openModal3() {
+            document.getElementById("myModal3").style.display = "block";
+        }
+
+        function closeModal3() {
+            document.getElementById("myModal3").style.display = "none";
+        }
+
+        var slideIndex3 = 1;
+        showSlides3(slideIndex3);
+
+        function plusSlides3(n) {
+            showSlides3(slideIndex3 += n);
+        }
+
+        function currentSlide3(n) {
+            showSlides3(slideIndex3 = n);
+        }
+
+
+        function showSlides3(n) {
+            var i;
+            var slides3 = document.getElementsByClassName("mySlides3");
+            var dots3 = document.getElementsByClassName("demo3");
+            var captionText3 = document.getElementById("caption3");
+            if (n > slides3.length) {
+                slideIndex3 = 1
+            }
+            if (n < 1) {
+                slideIndex3 = slides3.length
+            }
+            for (i = 0; i < slides3.length; i++) {
+                slides3[i].style.display = "none";
+            }
+            for (i = 0; i < dots3.length; i++) {
+                dots3[i].className = dots3[i].className.replace("active", " ");
+            }
+            slides3[slideIndex3 - 1].style.display = "block";
+            dots3[slideIndex3 - 1].className += " ";
+            captionText3.innerHTML = dot3[slideIndex3 - 1].alt;
         }
     </script>
 

@@ -439,6 +439,7 @@
  div.overflowtest {
      background-color: rgb(37, 36, 36);
      opacity: 1;
+     width: 100%;
      overflow-x: auto;
      white-space: nowrap;
  }
@@ -446,7 +447,7 @@
  div.overflowtest .demo {
      display: inline-flex;
      color: white;
-     width: auto;
+     width: 100%;
      padding: 1%;
  }
  /* ===== CONTACT =====*/
