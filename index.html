@@ -126,6 +126,12 @@
         width: 90%;
     }
     
+    .vid {
+        margin-bottom: -4px;
+        margin: auto;
+        width: 90%;
+    }
+    
     .caption-container {
         text-align: center;
         background-color: rgb(31, 30, 30);
@@ -425,14 +431,20 @@
                         <div class="numbertext">1 / 8 </div>
                         <a class="next" onclick="plusSlides(1)">&#10095;</a>
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <img class="imgr" src="assets/img/fw1.png" style="width:90%">
+                        <center><video class="vid" style="width:90%" controls>
+                            <source src="assets/fw.mp4" type="video/mp4">  
+                          </video>
+                        </center>
+
                     </div>
+
 
                     <div class="mySlides">
                         <div class="numbertext">2 / 8</div>
                         <a class="next" onclick="plusSlides(1)">&#10095;</a>
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                         <img class="imgr" src="assets/img/fw1.png" style="width:90%">
+
                     </div>
 
                     <div class="mySlides">
@@ -477,20 +489,17 @@
                 </div>
 
                 <div class="caption-container">
-                    <p id="caption"></p>
+
                 </div>
-                <div class="caption-container">
-                    <p id="caption"></p>
-                </div>
-                <div class="caption-container">
-                    <p id="caption"></p>
-                </div>
-                <div class="caption-container">
-                    <p id="caption"></p>
-                </div>
+                <div class="caption-container"></div>
+                <div class="caption-container"></div>
+                <div class="caption-container"></div>
 
                 <div class="overflowtest">
-                    <img class="demo cursor" src="assets/img/fw1.png" style="width:25%" onclick="currentSlide(1)" alt="">
+                    <video class="demo cursor" style="width:25%" onclick="currentSlide(1)" alt="fireworks vfx (PC)" controls>
+                        <source src="assets/fw.mp4" type="video/mp4">
+                        <source src="assets/fw.ogg" type="video/ogg">
+                    </video>
                     <img class="demo cursor" src="assets/img/fw1.png" style="width:25%" onclick="currentSlide(2)" alt="">
                     <img class="demo cursor" src="assets/img/fw1.png" style="width:25%" onclick="currentSlide(3)" alt="">
                     <img class="demo cursor" src="assets/img/fw2.png" style="width:25%" onclick="currentSlide(4)" alt="">
@@ -518,7 +527,7 @@
                         <div class="numbertext2">2 / 6</div>
                         <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
                         <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
-                        <img class="imgr2" src="assets/img/erg1.png" style="width:90%">
+                        <img class="imgr2" src="assets/img/erg.png" style="width:90%">
                     </div>
 
                     <div class="mySlides2">
@@ -567,7 +576,7 @@
 
                 <div class="overflowtest">
                     <img class="demo cursor" src="assets/img/erg.png" style="width:25%" onclick="currentSlide2(1)" alt="">
-                    <img class="demo cursor" src="assets/img/erg1.png" style="width:25%" onclick="currentSlide2(2)" alt="">
+                    <img class="demo cursor" src="assets/img/erg.png" style="width:25%" onclick="currentSlide2(2)" alt="">
                     <img class="demo cursor" src="assets/img/erg2.png" style="width:25%" onclick="currentSlide2(3)" alt="">
                     <img class="demo cursor" src="assets/img/erg3.png" style="width:25%" onclick="currentSlide2(4)" alt="">
                     <img class="demo cursor" src="assets/img/erg4.png" style="width:25%" onclick="currentSlide2(5)" alt="">
@@ -669,7 +678,7 @@
             </div>
         </nav>
     </header>
-
+    2
     <main class="l-main">
         <!--===== HOME =====-->
 
@@ -863,7 +872,7 @@
                 </div>
 
                 <div class="work__img">
-                    <img src="assets/img/erg1.png" alt="">
+                    <img src="assets/img/erg.png" alt="">
                     <div class="work__link" onclick="openModal2();currentSlide2(1)">
                         <a class="work__link-name">View</a>
                     </div>
@@ -883,13 +892,7 @@
                         <center>Animations</center>
                     </div>
                 </div>
-
-
-
-
             </div>
-
-
         </section>
 
         <!--===== CONTACT =====-->
@@ -970,7 +973,7 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " ";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
+
         }
     </script>
 
@@ -1015,7 +1018,7 @@
             }
             slides2[slideIndex2 - 1].style.display = "block";
             dots2[slideIndex2 - 1].className += " ";
-            captionText2.innerHTML = dots2[slideIndex2 - 1].alt;
+
         }
     </script>
 
